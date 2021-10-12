@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+*.sqlite3
+media/
+
+# Environment
+.env
+
+# Other
+.DS_Store
+*.log
+run.sh
+
+# Python VENV directory
+ncsswebenv/

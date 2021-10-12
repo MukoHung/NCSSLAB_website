@@ -1,0 +1,694 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-01 16:39+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: NCSSLAB/settings.py:121
+msgid "English"
+msgstr "英文"
+
+#: NCSSLAB/settings.py:122
+msgid "Traditional Chinese"
+msgstr "繁體中文"
+
+#: NCSSLAB/urls.py:9
+msgid "admin/"
+msgstr ""
+
+#: lab_website/models.py:6 lab_website/models.py:16 lab_website/models.py:27
+msgid "標題"
+msgstr ""
+
+#: lab_website/models.py:7 lab_website/models.py:17 lab_website/models.py:28
+msgid "內容"
+msgstr ""
+
+#: lab_website/models.py:8 lab_website/models.py:21 lab_website/models.py:32
+#: lab_website/templates/lab_website/news_detail.html:38
+#: lab_website/templates/lab_website/obser_report_detail.html:43
+#: lab_website/templates/lab_website/tech_report_detail.html:43
+#: lab_website_backstage/templates/lab_website_backstage/back_obser_report_detail.html:42
+#: lab_website_backstage/templates/lab_website_backstage/back_tech_report_detail.html:42
+#: lab_website_backstage/templates/lab_website_backstage/backnews_detail.html:39
+msgid "附件"
+msgstr ""
+
+#: lab_website/models.py:9 lab_website/models.py:18 lab_website/models.py:29
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:8
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:58
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:108
+#: lab_website_backstage/templates/lab_website_backstage/back_obser_report.html:15
+#: lab_website_backstage/templates/lab_website_backstage/back_tech_report.html:15
+#: lab_website_backstage/templates/lab_website_backstage/backnews_list.html:15
+msgid "建立時間"
+msgstr ""
+
+#: lab_website/models.py:10 lab_website/models.py:19 lab_website/models.py:30
+#: lab_website_backstage/templates/lab_website_backstage/back_obser_report.html:16
+#: lab_website_backstage/templates/lab_website_backstage/back_tech_report.html:16
+#: lab_website_backstage/templates/lab_website_backstage/backnews_list.html:16
+msgid "修改時間"
+msgstr ""
+
+#: lab_website/models.py:20 lab_website/models.py:31
+msgid "圖片"
+msgstr ""
+
+#: lab_website/templates/base.html:32
+msgid "首頁"
+msgstr ""
+
+#: lab_website/templates/base.html:33
+msgid "實驗室介紹"
+msgstr ""
+
+#: lab_website/templates/base.html:34
+#: lab_website/templates/lab_website/index.html:28
+#: lab_website/templates/lab_website/news_detail.html:10
+#: lab_website/templates/lab_website/news_list.html:6
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:4
+msgid "公告"
+msgstr ""
+
+#: lab_website/templates/base.html:36
+msgid "報告"
+msgstr ""
+
+#: lab_website/templates/base.html:38
+#: lab_website/templates/lab_website/index.html:52
+#: lab_website/templates/lab_website/tech_keyword_research.html:10
+#: lab_website/templates/lab_website/tech_report.html:8
+#: lab_website/templates/lab_website/tech_report_detail.html:9
+#: lab_website/templates/lab_website/tech_select_date.html:10
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:54
+msgid "技術報告"
+msgstr ""
+
+#: lab_website/templates/base.html:39
+#: lab_website/templates/lab_website/index.html:81
+#: lab_website/templates/lab_website/obser_keyword_research.html:10
+#: lab_website/templates/lab_website/obser_report.html:8
+#: lab_website/templates/lab_website/obser_report_detail.html:9
+#: lab_website/templates/lab_website/obser_select_date.html:10
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:104
+msgid "觀測報告"
+msgstr ""
+
+#: lab_website/templates/base.html:42
+#: lab_website/templates/lab_website/contact.html:14
+#: lab_website/templates/lab_website/contact.html:22
+msgid "聯絡我們"
+msgstr ""
+
+#: lab_website/templates/base.html:44
+msgid "實驗室服務"
+msgstr ""
+
+#: lab_website/templates/base.html:46
+msgid "SSDLC 平台"
+msgstr ""
+
+#: lab_website/templates/base.html:50
+msgid "外部連結"
+msgstr ""
+
+#: lab_website/templates/base.html:58
+#: lab_website_backstage/templates/base_back.html:27
+msgid "Language"
+msgstr ""
+
+#: lab_website/templates/lab_website/about.html:10
+#: lab_website/templates/lab_website/index.html:12
+msgid "國家通訊領域軟體安全實驗室"
+msgstr ""
+
+#: lab_website/templates/lab_website/about.html:11
+msgid ""
+"本實驗室的目標對象為「5G網路業者」、「第三方服務提供者」與「IOT設備商」，其目"
+"的為提出5G相關之軟體系統及框架與標準。"
+msgstr ""
+
+#: lab_website/templates/lab_website/about.html:23
+msgid "四大聚焦議題"
+msgstr ""
+
+#: lab_website/templates/lab_website/about.html:24
+msgid "1. 5G網路相關軟體系統與應用程式之安全性"
+msgstr ""
+
+#: lab_website/templates/lab_website/about.html:25
+msgid "2. 5G網路軟體部署及更新之安全管理"
+msgstr ""
+
+#: lab_website/templates/lab_website/about.html:26
+msgid "3. 安全可信賴的5G網路供應鏈管理"
+msgstr ""
+
+#: lab_website/templates/lab_website/about.html:27
+msgid "4. 用戶隱私保護之政策、制度、技術、防護措施"
+msgstr ""
+
+#: lab_website/templates/lab_website/about.html:38
+msgid "三大目標"
+msgstr ""
+
+#: lab_website/templates/lab_website/about.html:39
+msgid "1. 建立5G網路軟體系統及營運安全管理之參考框架、文件與機制"
+msgstr ""
+
+#: lab_website/templates/lab_website/about.html:40
+msgid "2. 協助網路業者及5G服務提供者建立資安能量與能力"
+msgstr ""
+
+#: lab_website/templates/lab_website/about.html:41
+msgid "3. 提供檢測及驗證服務"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:15
+msgid "感謝您的來信！我們會盡快聯繫您。"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:23
+msgid "如果想了解更多資訊，請填寫下方表單，我們會盡快聯繫您。"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:32
+msgid "姓名"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:37
+msgid "公司名稱"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:42
+msgid "電子郵件"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:47
+msgid "電話號碼"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:51
+msgid "您的需求為何？"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:54
+msgid "獲得 NCSS LAB 的更多消息"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:58
+msgid "參觀 NCSS LAB"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:62
+msgid "欲安排會面"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:66
+msgid "其他"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:72
+msgid "如果您勾選&quot;其他&quot;，請於此說明"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:78
+msgid "我接受我的個人資料被用於提交此表單。"
+msgstr ""
+
+#: lab_website/templates/lab_website/contact.html:82
+msgid "提交"
+msgstr ""
+
+#: lab_website/templates/lab_website/index.html:13
+msgid "National Communications Software Security Laboratory"
+msgstr ""
+
+#: lab_website/templates/lab_website/index.html:15
+msgid "了解更多"
+msgstr ""
+
+#: lab_website/templates/lab_website/index.html:41
+#: lab_website/templates/lab_website/index.html:72
+#: lab_website/templates/lab_website/index.html:101
+msgid "更多"
+msgstr ""
+
+#: lab_website/templates/lab_website/news_detail.html:12
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:10
+#: lab_website_backstage/templates/lab_website_backstage/backnews_detail.html:9
+msgid "公告內容"
+msgstr ""
+
+#: lab_website/templates/lab_website/news_detail.html:47
+#: lab_website/templates/lab_website/obser_report_detail.html:52
+#: lab_website/templates/lab_website/tech_report_detail.html:52
+#: lab_website_backstage/templates/lab_website_backstage/back_obser_report_detail.html:29
+#: lab_website_backstage/templates/lab_website_backstage/back_tech_report_detail.html:29
+#: lab_website_backstage/templates/lab_website_backstage/backnews_detail.html:29
+msgid "已修改"
+msgstr ""
+
+#: lab_website/templates/lab_website/news_list.html:27
+#: lab_website/templates/pagination.html:9
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:34
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:84
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:134
+#: lab_website_backstage/templates/pagination.html:9
+msgid "上一頁"
+msgstr ""
+
+#: lab_website/templates/lab_website/news_list.html:38
+#: lab_website/templates/pagination.html:20
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:46
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:96
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:146
+#: lab_website_backstage/templates/pagination.html:20
+msgid "下一頁"
+msgstr ""
+
+#: lab_website/templates/lab_website/obser_keyword_research.html:12
+#: lab_website/templates/lab_website/obser_select_date.html:12
+#: lab_website/templates/lab_website/tech_keyword_research.html:12
+#: lab_website/templates/lab_website/tech_select_date.html:12
+msgid "查詢結果"
+msgstr ""
+
+#: lab_website/templates/lab_website/obser_keyword_research.html:18
+#: lab_website/templates/lab_website/obser_report.html:12
+#: lab_website/templates/lab_website/obser_select_date.html:18
+#: lab_website/templates/lab_website/tech_keyword_research.html:18
+#: lab_website/templates/lab_website/tech_report.html:12
+#: lab_website/templates/lab_website/tech_select_date.html:18
+msgid "日期查詢"
+msgstr ""
+
+#: lab_website/templates/lab_website/obser_keyword_research.html:30
+#: lab_website/templates/lab_website/obser_report.html:24
+#: lab_website/templates/lab_website/obser_select_date.html:30
+#: lab_website/templates/lab_website/tech_keyword_research.html:30
+#: lab_website/templates/lab_website/tech_report.html:24
+#: lab_website/templates/lab_website/tech_select_date.html:30
+msgid "關鍵字查詢"
+msgstr ""
+
+#: lab_website/templates/lab_website/obser_keyword_research.html:33
+#: lab_website/templates/lab_website/obser_report.html:27
+#: lab_website/templates/lab_website/obser_select_date.html:33
+#: lab_website/templates/lab_website/tech_keyword_research.html:33
+#: lab_website/templates/lab_website/tech_report.html:27
+#: lab_website/templates/lab_website/tech_select_date.html:33
+msgid "請輸入關鍵字"
+msgstr ""
+
+#: lab_website/templates/lab_website/obser_keyword_research.html:54
+#: lab_website/templates/lab_website/obser_report.html:48
+#: lab_website/templates/lab_website/obser_select_date.html:54
+#: lab_website/templates/lab_website/tech_keyword_research.html:54
+#: lab_website/templates/lab_website/tech_report.html:48
+#: lab_website/templates/lab_website/tech_select_date.html:54
+msgid "查看更多"
+msgstr ""
+
+#: lab_website/templates/lab_website/obser_report_detail.html:11
+#: lab_website/templates/lab_website/tech_report_detail.html:11
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:60
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:110
+#: lab_website_backstage/templates/lab_website_backstage/back_obser_report_detail.html:9
+#: lab_website_backstage/templates/lab_website_backstage/back_tech_report_detail.html:9
+msgid "報告內容"
+msgstr ""
+
+#: lab_website_backstage/models.py:5
+#: lab_website_backstage/templates/lab_website_backstage/back_mail.html:17
+msgid "收件人"
+msgstr ""
+
+#: lab_website_backstage/templates/base_back.html:10
+#: lab_website_backstage/templates/base_back.html:22
+#: lab_website_backstage/templates/registration/login.html:10
+#: lab_website_backstage/templates/registration/login.html:47
+msgid "NCSS LAB 後台管理"
+msgstr ""
+
+#: lab_website_backstage/templates/base_back.html:50
+msgid "登出"
+msgstr ""
+
+#: lab_website_backstage/templates/base_back.html:63
+msgid "一般"
+msgstr ""
+
+#: lab_website_backstage/templates/base_back.html:67
+msgid "公告管理\b&emsp;"
+msgstr ""
+
+#: lab_website_backstage/templates/base_back.html:73
+msgid "技術報告管理&emsp;"
+msgstr ""
+
+#: lab_website_backstage/templates/base_back.html:79
+msgid "觀測報告管理&emsp;"
+msgstr ""
+
+#: lab_website_backstage/templates/base_back.html:85
+#: lab_website_backstage/templates/form/back_change_pw.html:7
+#: lab_website_backstage/templates/lab_website_backstage/back_profile.html:6
+msgid "個人檔案"
+msgstr ""
+
+#: lab_website_backstage/templates/base_back.html:89
+msgid "管理者功能"
+msgstr ""
+
+#: lab_website_backstage/templates/base_back.html:93
+#: lab_website_backstage/templates/form/back_add_recipient.html:7
+#: lab_website_backstage/templates/form/bakc_delete_recipient.html:7
+#: lab_website_backstage/templates/lab_website_backstage/back_mail.html:6
+msgid "信件設定"
+msgstr ""
+
+#: lab_website_backstage/templates/base_back.html:99
+#: lab_website_backstage/templates/form/group_confirm_delete.html:7
+#: lab_website_backstage/templates/lab_website_backstage/back_group.html:6
+#: lab_website_backstage/templates/lab_website_backstage/back_permission.html:6
+msgid "權限設定"
+msgstr ""
+
+#: lab_website_backstage/templates/base_back.html:105
+#: lab_website_backstage/templates/form/back_add_user.html:7
+#: lab_website_backstage/templates/form/back_delete_user.html:7
+#: lab_website_backstage/templates/form/back_reset_pw.html:7
+#: lab_website_backstage/templates/form/back_update_user.html:7
+#: lab_website_backstage/templates/form/user_confirm_delete copy.html:7
+#: lab_website_backstage/templates/lab_website_backstage/back_account.html:6
+msgid "帳號管理"
+msgstr ""
+
+#: lab_website_backstage/templates/form/back_add_group.html:7
+#: lab_website_backstage/templates/form/back_update_group.html:7
+msgid "群組管理"
+msgstr ""
+
+#: lab_website_backstage/templates/form/back_add_group.html:9
+#: lab_website_backstage/templates/lab_website_backstage/back_group.html:10
+#: lab_website_backstage/templates/lab_website_backstage/back_permission.html:10
+msgid "新增群組"
+msgstr ""
+
+#: lab_website_backstage/templates/form/back_add_group.html:21
+#: lab_website_backstage/templates/form/back_add_recipient.html:18
+#: lab_website_backstage/templates/form/back_add_user.html:17
+#: lab_website_backstage/templates/form/back_change_pw.html:17
+#: lab_website_backstage/templates/form/back_delete_user.html:17
+#: lab_website_backstage/templates/form/back_reset_pw.html:17
+#: lab_website_backstage/templates/form/back_update_group.html:26
+#: lab_website_backstage/templates/form/back_update_user.html:26
+#: lab_website_backstage/templates/form/news_form.html:23
+#: lab_website_backstage/templates/form/obserreport_form.html:23
+#: lab_website_backstage/templates/form/techreport_form.html:23
+msgid "送出"
+msgstr ""
+
+#: lab_website_backstage/templates/form/back_add_group.html:22
+#: lab_website_backstage/templates/form/back_add_recipient.html:19
+#: lab_website_backstage/templates/form/back_add_user.html:18
+#: lab_website_backstage/templates/form/back_change_pw.html:18
+#: lab_website_backstage/templates/form/back_delete_user.html:18
+#: lab_website_backstage/templates/form/back_reset_pw.html:18
+#: lab_website_backstage/templates/form/back_update_group.html:27
+#: lab_website_backstage/templates/form/back_update_user.html:27
+#: lab_website_backstage/templates/form/bakc_delete_recipient.html:22
+#: lab_website_backstage/templates/form/group_confirm_delete.html:20
+#: lab_website_backstage/templates/form/news_confirm_delete.html:23
+#: lab_website_backstage/templates/form/news_form.html:24
+#: lab_website_backstage/templates/form/obserreport_confirm_delete.html:23
+#: lab_website_backstage/templates/form/obserreport_form.html:24
+#: lab_website_backstage/templates/form/techreport_confirm_delete.html:23
+#: lab_website_backstage/templates/form/techreport_form.html:24
+#: lab_website_backstage/templates/form/user_confirm_delete copy.html:20
+msgid "取消"
+msgstr ""
+
+#: lab_website_backstage/templates/form/back_add_recipient.html:9
+#: lab_website_backstage/templates/lab_website_backstage/back_mail.html:10
+msgid "新增收件人"
+msgstr ""
+
+#: lab_website_backstage/templates/form/back_add_user.html:9
+#: lab_website_backstage/templates/lab_website_backstage/back_account.html:10
+msgid "新增使用者"
+msgstr ""
+
+#: lab_website_backstage/templates/form/back_change_pw.html:9
+#: lab_website_backstage/templates/form/back_delete_user.html:9
+#: lab_website_backstage/templates/form/back_reset_pw.html:9
+#: lab_website_backstage/templates/lab_website_backstage/back_profile.html:27
+msgid "變更密碼"
+msgstr ""
+
+#: lab_website_backstage/templates/form/back_update_group.html:9
+msgid "群組權限修改"
+msgstr ""
+
+#: lab_website_backstage/templates/form/back_update_user.html:9
+msgid "使用者權限修改"
+msgstr ""
+
+#: lab_website_backstage/templates/form/bakc_delete_recipient.html:9
+msgid "刪除收件人"
+msgstr ""
+
+#: lab_website_backstage/templates/form/bakc_delete_recipient.html:18
+msgid "確定要刪除此收件人嗎？"
+msgstr ""
+
+#: lab_website_backstage/templates/form/bakc_delete_recipient.html:21
+#: lab_website_backstage/templates/form/group_confirm_delete.html:19
+#: lab_website_backstage/templates/form/news_confirm_delete.html:22
+#: lab_website_backstage/templates/form/obserreport_confirm_delete.html:22
+#: lab_website_backstage/templates/form/techreport_confirm_delete.html:22
+#: lab_website_backstage/templates/form/user_confirm_delete copy.html:19
+msgid "是的，我要刪除"
+msgstr ""
+
+#: lab_website_backstage/templates/form/group_confirm_delete.html:9
+#: lab_website_backstage/templates/lab_website_backstage/back_group.html:37
+msgid "刪除群組"
+msgstr ""
+
+#: lab_website_backstage/templates/form/group_confirm_delete.html:16
+msgid "確定要刪除該群組?"
+msgstr ""
+
+#: lab_website_backstage/templates/form/news_confirm_delete.html:7
+#: lab_website_backstage/templates/form/news_form.html:7
+#: lab_website_backstage/templates/lab_website_backstage/backnews_detail.html:7
+#: lab_website_backstage/templates/lab_website_backstage/backnews_list.html:6
+msgid "公告管理"
+msgstr ""
+
+#: lab_website_backstage/templates/form/news_confirm_delete.html:9
+msgid "刪除公告"
+msgstr ""
+
+#: lab_website_backstage/templates/form/news_confirm_delete.html:19
+#: lab_website_backstage/templates/form/obserreport_confirm_delete.html:19
+#: lab_website_backstage/templates/form/techreport_confirm_delete.html:19
+msgid "確定要刪除這筆紀錄嗎？"
+msgstr ""
+
+#: lab_website_backstage/templates/form/news_form.html:10
+#: lab_website_backstage/templates/lab_website_backstage/backnews_list.html:9
+msgid "新增公告"
+msgstr ""
+
+#: lab_website_backstage/templates/form/news_form.html:12
+msgid "編輯公告"
+msgstr ""
+
+#: lab_website_backstage/templates/form/obserreport_confirm_delete.html:7
+#: lab_website_backstage/templates/form/obserreport_form.html:7
+#: lab_website_backstage/templates/lab_website_backstage/back_obser_report.html:6
+#: lab_website_backstage/templates/lab_website_backstage/back_obser_report_detail.html:7
+msgid "觀測報告管理"
+msgstr ""
+
+#: lab_website_backstage/templates/form/obserreport_confirm_delete.html:9
+#: lab_website_backstage/templates/form/techreport_confirm_delete.html:9
+msgid "刪除報告"
+msgstr ""
+
+#: lab_website_backstage/templates/form/obserreport_form.html:10
+#: lab_website_backstage/templates/form/techreport_form.html:10
+#: lab_website_backstage/templates/lab_website_backstage/back_obser_report.html:9
+#: lab_website_backstage/templates/lab_website_backstage/back_tech_report.html:9
+msgid "新增報告"
+msgstr ""
+
+#: lab_website_backstage/templates/form/obserreport_form.html:12
+#: lab_website_backstage/templates/form/techreport_form.html:12
+msgid "編輯報告"
+msgstr ""
+
+#: lab_website_backstage/templates/form/techreport_confirm_delete.html:7
+#: lab_website_backstage/templates/form/techreport_form.html:7
+#: lab_website_backstage/templates/lab_website_backstage/back_tech_report.html:6
+#: lab_website_backstage/templates/lab_website_backstage/back_tech_report_detail.html:7
+msgid "技術報告管理"
+msgstr ""
+
+#: lab_website_backstage/templates/form/user_confirm_delete copy.html:9
+msgid "刪除該使用者"
+msgstr ""
+
+#: lab_website_backstage/templates/form/user_confirm_delete copy.html:16
+msgid "確定要刪除該使用者?"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_account.html:15
+msgid "可管理帳號"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_account.html:18
+#: lab_website_backstage/templates/lab_website_backstage/back_profile.html:13
+msgid "帳號名稱"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_account.html:19
+msgid "群組"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_account.html:20
+#: lab_website_backstage/templates/lab_website_backstage/back_group.html:21
+#: lab_website_backstage/templates/lab_website_backstage/back_mail.html:18
+#: lab_website_backstage/templates/lab_website_backstage/back_obser_report.html:18
+#: lab_website_backstage/templates/lab_website_backstage/back_permission.html:19
+#: lab_website_backstage/templates/lab_website_backstage/back_profile.html:15
+#: lab_website_backstage/templates/lab_website_backstage/back_tech_report.html:18
+#: lab_website_backstage/templates/lab_website_backstage/backnews_list.html:18
+msgid "操作"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_account.html:33
+msgid "重設密碼"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_account.html:34
+msgid "修改權限群組"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_account.html:35
+msgid "刪除帳號"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:9
+#: lab_website_backstage/templates/lab_website_backstage/backnews_list.html:17
+msgid "公告標題"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:11
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:61
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:111
+msgid "附檔"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:21
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:72
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:122
+msgid "有"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:23
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:74
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:124
+msgid "無"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:59
+#: lab_website_backstage/templates/lab_website_backstage/back_dashboard.html:109
+#: lab_website_backstage/templates/lab_website_backstage/back_obser_report.html:17
+#: lab_website_backstage/templates/lab_website_backstage/back_tech_report.html:17
+msgid "報告標題"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_group.html:14
+msgid "所有群組"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_group.html:17
+#: lab_website_backstage/templates/lab_website_backstage/back_permission.html:16
+msgid "權限群組"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_group.html:18
+#: lab_website_backstage/templates/lab_website_backstage/back_permission.html:17
+msgid "權限內容"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_group.html:36
+msgid "編輯權限"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_mail.html:30
+#: lab_website_backstage/templates/lab_website_backstage/back_obser_report.html:36
+#: lab_website_backstage/templates/lab_website_backstage/back_tech_report.html:36
+#: lab_website_backstage/templates/lab_website_backstage/backnews_list.html:36
+msgid "刪除"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_obser_report.html:32
+#: lab_website_backstage/templates/lab_website_backstage/back_permission.html:41
+#: lab_website_backstage/templates/lab_website_backstage/back_permission.html:60
+#: lab_website_backstage/templates/lab_website_backstage/back_permission.html:78
+#: lab_website_backstage/templates/lab_website_backstage/back_tech_report.html:32
+#: lab_website_backstage/templates/lab_website_backstage/backnews_list.html:32
+msgid "編輯"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_permission.html:18
+msgid "成員"
+msgstr ""
+
+#: lab_website_backstage/templates/lab_website_backstage/back_profile.html:14
+msgid "權限"
+msgstr ""
+
+#: lab_website_backstage/templates/registration/login.html:72
+msgid "帳號或密碼不符合，請再試一次。"
+msgstr ""
+
+#: lab_website_backstage/templates/registration/login.html:81
+msgid "NCSS 後台系統"
+msgstr ""
+
+#: lab_website_backstage/templates/registration/login.html:84
+msgid "登入管理"
+msgstr ""
+
+#: lab_website_backstage/templates/registration/login.html:92
+msgid "帳號"
+msgstr ""
+
+#: lab_website_backstage/templates/registration/login.html:95
+msgid "密碼"
+msgstr ""
+
+#: lab_website_backstage/templates/registration/login.html:101
+msgid "登入"
+msgstr ""

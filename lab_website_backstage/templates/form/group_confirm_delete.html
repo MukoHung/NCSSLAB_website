@@ -1,0 +1,23 @@
+{% extends 'base_back.html' %}
+{% block content %}
+{% load i18n %}
+<nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+    <ol class="breadcrumb h3">
+        <li class="breadcrumb-item">
+            <a href="{% url 'back_group' %}" class="text-dark text-decoration-none">{% translate "權限設定" %}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">{% translate "刪除群組" %}</li>
+    </ol>
+</nav>
+<br>
+<div class="table-responsive">
+    <h4>{{ object }}</h4>
+    <br>
+    <p><strong>{% translate "確定要刪除該群組?" %}</strong></p>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" value="{% translate "是的，我要刪除" %}" class="btn btn-danger"/>
+        <a href="{% url 'back_group' %}" type="button" class="btn btn-dark">{% translate "取消" %}</a>
+    </form>
+</div>
+{% endblock %}

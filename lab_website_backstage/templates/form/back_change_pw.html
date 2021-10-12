@@ -1,0 +1,41 @@
+{% extends 'base_back.html' %}
+{% load i18n %}
+{% load widget_tweaks %}
+{% block content %}
+<nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+    <ol class="breadcrumb h3">
+        <li class="breadcrumb-item">
+            <a href="{% url 'back_profile' %}" class="text-dark text-decoration-none">{% translate "個人檔案" %}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">{% translate "變更密碼" %}</li>
+    </ol>
+</nav>
+<div class="table-responsive">
+    <div class="col-4">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% for field in form.visible_fields %}
+                <div class="form-group">
+                    {{ field.label_tag }}
+                    <br>
+                    {% render_field field class="form-control" %}
+
+                    {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.help_text|safe }}</small>
+                    {% endif %}
+
+                    {% if field.errors %}
+                        {% for error in field.errors %}
+                            <div class="alert alert-danger py-2 my-2" role="alert">{{ error|escape }}</div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <br>
+            {% endfor %}
+            <br>
+            <input class="btn btn-success" type="submit" value="{% translate "送出" %}" />
+            <a href="{% url 'back_profile' %}" type="button" class="btn btn-dark">{% translate "取消" %}</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

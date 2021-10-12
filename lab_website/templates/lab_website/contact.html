@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+<!-- Page content-->
+<section class="py-5">
+    <div class="container px-5">
+        <!-- Contact form-->
+        <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+            {% if msg_name %}
+                <div class="text-center mb-5">
+                    <div class="feature bg-dark bg-gradient text-white rounded-3 mb-3">
+                        <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <h1 class="fw-bolder">{% translate "聯絡我們" %}</h1>
+                    <p class="lead fw-normal text-muted mb-0">{% translate "感謝您的來信！我們會盡快聯繫您。" %}</p>
+                </div>
+            {% else %}
+                <div class="text-center mb-5">
+                    <div class="feature bg-dark bg-gradient text-white rounded-3 mb-3">
+                        <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <h1 class="fw-bolder">{% translate "聯絡我們" %}</h1>
+                    <p class="lead fw-normal text-muted mb-0">{% translate "如果想了解更多資訊，請填寫下方表單，我們會盡快聯繫您。" %}</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <form id="contactForm" action="{% url 'contact' %}" method="POST">
+                            {% csrf_token %}
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" name="msg-name" type="text" placeholder="Enter your name..." required>
+                                <label for="name">{% translate "姓名" %}<span style="color:red;"> *</span></label>
+                            </div>
+                            <!-- Company input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="company" name="msg-company" type="text" placeholder="Enter Name of your company..." required>
+                                <label for="name">{% translate "公司名稱" %}<span style="color:red;"> *</span></label>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" name="msg-email" type="email" placeholder="name@example.com" required>
+                                <label for="email">{% translate "電子郵件" %}<span style="color:red;"> *</span></label>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" name="msg-phone" type="tel" placeholder="1234-567-890" required>
+                                <label for="phone">{% translate "電話號碼" %}<span style="color:red;"> *</span></label>
+                            </div>
+                            <!-- Message input-->
+                            <div class="mb-3">
+                                <label class="form-label d-block">{% translate "您的需求為何？" %}<span style="color:red;"> *</span></label>
+                                <div class="form-check">
+                                    <input class="form-check-input" id="form-check-1" type="radio" name="msg-check" value="獲得 NCSS LAB 的更多消息" required>
+                                    <label class="form-check-label" for="form-check-1">{% translate "獲得 NCSS LAB 的更多消息" %}</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" id="form-check-2" type="radio" name="msg-check" value="參觀 NCSS LAB" required>
+                                    <label class="form-check-label" for="form-check-2">{% translate "參觀 NCSS LAB" %}</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" id="form-check-3" type="radio" name="msg-check" value="欲安排會面" required>
+                                    <label class="form-check-label" for="form-check-3">{% translate "欲安排會面" %}</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" id="form-check-4" type="radio" name="msg-check" value="其他" required>
+                                    <label class="form-check-label" for="form-check-4">{% translate "其他" %}</label>
+                                </div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" name="msg-other" type="text" style="height: 10rem"></textarea>
+                                <label for="message">{% translate "如果您勾選&quot;其他&quot;，請於此說明" %}</label>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label d-block"></label>
+                                <div class="form-check">
+                                    <input class="form-check-input" id="privacy" type="checkbox" required>
+                                    <label class="form-check-label" for="privacy">{% translate "我接受我的個人資料被用於提交此表單。" %}<span style="color:red;"> *</span></label>
+                                </div>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-dark btn-lg" id="submitButton" type="submit">{% translate "提交" %}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- Page Content-->
+<section class="py-5">
+    <div class="container px-5">
+        <h1 class="fw-bolder fs-3 mb-4">{% translate "觀測報告" %}</h1>
+        <div class="input-group rounded mb-2 p-2 bg-light">
+            <form class="d-flex flex-column p-2  mx-auto" method=POST action="{% url 'obser_select_date' %}">
+                {% csrf_token %}
+                <div class="text-center">{% translate "日期查詢" %}</div>
+                <div class="d-flex flex-row p-2">
+                    <div class="input-group input-group-prepend mb-3">
+                        <input type="month" class="form-control" name="start_date" value="2021-01" style="width:25%;">
+                        <div class="text-center">&ensp;-&ensp;</div>
+                        <input type="month" class="form-control" name="end_date" value="2021-12" style="width:25%;">
+                    </div>
+                    <span>&ensp;</span>
+                    <button class="btn btn-outline-secondary mb-3" type="submit"><i class="bi bi-search"></i></button>
+                </div>
+            </form>
+            <form class="d-flex flex-column p-2 mx-auto" method=POST action="{% url 'obser_keyword_research' %}">
+                <div class="text-center">{% translate "關鍵字查詢" %}</div>
+                <div class="d-flex flex-row p-2">
+                    {% csrf_token %}
+                    <input class="form-control me-2" type="search" name="searched" placeholder="{% translate "請輸入關鍵字" %}" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i></button>
+                </div>
+            </form>
+        </div>
+        <br>
+        {% for o in obserreport_list %}
+        <div class="card border-0 shadow rounded-3 overflow-hidden">
+            <div class="card-body p-3">
+                <div class="row gx-0">
+                    <div class="col-lg-4 col-xl-3"><div class="bg-featured-blog" style="background-image: url('{{ o.img.url }}')" alt="{{ o.subject }}"></div></div>
+                    <div class="col-lg-8 col-xl-9 py-lg-5">
+                        <div class="p-4 p-md-5">
+                            <ul class="post-meta list-inline">
+                                <li class="list-inline-item">
+                                    <i class="fa fa-calendar-o"></i>&nbsp;&nbsp;{{ o.date|date:"Y-m-d" }}
+                                </li>
+                            </ul>
+                            <div class="h2 fw-bolder">{{ o.subject }}</div>
+                            <p>{{ o.content|safe|truncatechars:80 }}</p>
+                            <a class="stretched-link text-decoration-none" href="{{ o.id }}">
+                                {% translate "查看更多" %}
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <br>
+        <div class="d-flex justify-content-center">
+        {% include 'pagination.html' %}
+        </div>
+    </div>
+</section>
+{% endblock %}

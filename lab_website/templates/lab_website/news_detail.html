@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+<!-- Page Content-->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container py-3">
+    <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+    <ol class="breadcrumb h5">
+        <li class="breadcrumb-item">
+        <a href="{% url 'news' %}" class="text-dark text-decoration-none">{% translate "公告" %}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">{% translate "公告內容" %}</li>
+    </ol>
+    </nav>
+</div>
+<div class="container py-5 bg-light">
+
+    <div class="row">
+        <div class="col-md-12">
+            <article>
+                <div class="post-content px-5 ">
+                    <h3>{{ news.subject }}</h3>
+                    <br>
+                    <ul class="post-meta list-inline">
+                        <li class="list-inline-item">
+                            <i class="fa fa-calendar-o"></i>&nbsp;{{ news.date }}
+                        </li>
+                        <li class="list-inline-item">
+                            <i class="fa fa-tags"></i>&nbsp;News
+                        </li>
+                    </ul>
+                    <hr class="mb40">
+                    <p>{{ news.content|safe }}
+                    <br>
+                    <br>
+                    {% if news.file %}
+                        <ul class="list-inline share-buttons">
+                            <li class="list-inline-item fw-bold">{% translate "附件" %}:</li>
+                            <li class="list-inline-item">
+                                <a href="{{ news.file.url }}" class="link" target="_blank">{{ news.file.name|slice:"17:" }}</a>
+                            </li>
+                        </ul>
+                    {% endif %}
+                    {% if news.date|date:"Y-m-d h:m" in news.last_edit_time|date:"Y-m-d h:m" %}
+                        <div class="text-muted fst-italic mb-2"></div>
+                    {% else %}
+                            <div class="text-muted fst-italic mb-2">{{ news.last_edit_time }} {% translate "已修改" %}</div>
+                    {% endif %}
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock %}

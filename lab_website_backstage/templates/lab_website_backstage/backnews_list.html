@@ -1,0 +1,55 @@
+{% extends 'base_back.html' %}
+{% block content %}
+{% load i18n %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb h3">
+    <li class="breadcrumb-item active" aria-current="page">{% translate "公告管理" %}</li>
+  </ol>
+</nav>
+{% if perms.lab_website.add_news  %}
+    <a href="{% url 'create_news' %}" type="button" class="btn btn-dark">{% translate "新增公告" %}</a>
+{% endif %}
+<p>
+<div class="table-responsive">
+<table class="table table-striped table-hover">
+<thead>
+<tr class="table-dark">
+    <th>{% translate "建立時間" %}</th>
+    <th>{% translate "修改時間" %}</th>
+    <th>{% translate "公告標題" %}</th>
+    {% if perms.lab_website.change_news or perms.lab_website.delate_news %}
+        <th>{% translate "操作" %}</th>
+    {% endif %}
+</tr>
+</thead>
+<tbody>
+{% for news in news_list %}
+<tr>
+    <td style="width: 250px;">{{ news.date }}</td>
+    <td style="width: 250px;">{{ news.last_edit_time }}</td>
+    <td>
+    <a href="{{ news.id }}" class="link-dark">{{ news.subject }}</a>
+    </td>
+    {% if perms.lab_website.change_news or  perms.lab_website.delete_news %}
+        <td>
+        {% if perms.lab_website.change_news %}
+            <a href="{{ news.id }}/update/" class="btn btn-primary py-0 px-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="currentColor" class="bi bi-brush-fill" viewBox="0 0 16 16"><path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04z"/></svg>
+                {% translate "編輯" %}
+            </a>
+        {% endif %}
+        {% if perms.lab_website.delete_news %}
+            <a href="{{ news.id }}/delete/" class="btn btn-danger py-0 px-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16"><path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/></svg>
+                {% translate "刪除" %}
+            </a>
+        {% endif %}
+        </td>
+    {% endif %}
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% include 'pagination.html' %}
+</div>
+{% endblock %}

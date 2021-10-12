@@ -1,0 +1,36 @@
+{% extends 'base_back.html' %}
+{% load i18n %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+  <ol class="breadcrumb h3">
+    <li class="breadcrumb-item">
+      <a href="{% url 'back_group' %}" class="text-dark text-decoration-none">{% translate "群組管理" %}</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">{% translate "群組權限修改" %}</li>
+  </ol>
+</nav>
+<div class="table-responsive">
+    <div class="col-4">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% for field in form.visible_fields %}
+                <div class="form-group">
+                    {{ field.label_tag }}
+                    <br>
+                    {% render_field field class="form-control" %}
+                </div>
+                <br>
+            {% endfor %}
+            {{ form.media }}
+            <br>
+            <input class="btn btn-success" type="submit" value="{% translate "送出" %}" />
+            <a href="{% url 'back_group' %}" type="button" class="btn btn-dark">{% translate "取消" %}</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

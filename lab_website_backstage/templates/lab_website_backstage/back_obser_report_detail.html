@@ -1,0 +1,52 @@
+{% extends 'base_back.html' %}
+{% block content %}
+{% load i18n %}
+<nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+  <ol class="breadcrumb h3">
+    <li class="breadcrumb-item">
+      <a href="{% url 'back_obser_report' %}" class="text-dark text-decoration-none">{% translate "觀測報告管理" %}</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">{% translate "報告內容" %}</li>
+  </ol>
+</nav>
+<br>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bg-light">
+    <div class="row">
+        <article>
+            <div class="post-content">
+                <br>
+                <h4>{{ obserreport.subject }}</h4>
+                <br>
+                <ul class="post-meta list-inline">
+                    <li class="list-inline-item">
+                        <i class="fa fa-calendar-o"></i>&nbsp;{{ obserreport.date }}
+                    </li>
+                    {% if obserreport.date|date:"Y-m-d h:m" in obserreport.last_edit_time|date:"Y-m-d h:m" %}
+                        <div class="text-muted fst-italic mb-2"></div>
+                    {% else %}
+                        <li class="list-inline-item">
+                            <div class="text-muted fst-italic mb-2">({{ obserreport.last_edit_time }} {% translate "已修改" %})</div>
+                        </li>
+                    {% endif %}
+                </ul>
+                <hr class="mb40">
+                <figure class="mb-4">
+                    <img class="w-25 rounded" src="{{ obserreport.img.url }}" alt="{{ obserreport.subject }}" />
+                </figure>
+                <p>{{ obserreport.content|safe }}
+                <br>
+                <br>
+                {% if obserreport.file %}
+                    <ul class="list-inline share-buttons">
+                        <li class="list-inline-item fw-bold">{% translate "附件" %}:</li>
+                        <li class="list-inline-item">
+                            <a href="{{ obserreport.file.url }}" class="link" target="_blank">{{ obserreport.file.name|slice:"25:" }}</a>
+                        </li>
+                    </ul>
+                {% endif %}
+            </div>
+        </article>
+    </div>
+</div>
+{% endblock %}

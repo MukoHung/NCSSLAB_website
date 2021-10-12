@@ -1,0 +1,153 @@
+{% extends 'base_back.html' %}
+{% load i18n %}
+{% block content %}
+<div class="h2 fw-bolder" id="news">{% translate "公告" %}</div>
+<table class="table table-striped">
+    <thead>
+        <tr class="table-dark">
+            <th style="width: 200px;">{% translate "建立時間" %}</th>
+            <th style="width: 200px;">{% translate "公告標題" %}</th>
+            <th>{% translate "公告內容" %}</th>
+            <th class="text-center" style="width: 60px;">{% translate "附檔" %}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for news in news_list %}
+        <tr>
+            <td >{{ news.date }}</td>
+            <td><a href="news/{{ news.id }}" class="link-dark">{{ news.subject }}</td>
+            <td>{{ news.content|truncatechars:30|safe }}</td>
+            {% if news.file %}
+                 <td class="text-center">{% translate "有" %}</td>
+            {% else %}
+                <td class="text-center">{% translate "無" %}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% if news_list.has_other_pages %}
+    <div>
+        {% if news_list.has_previous %}
+        <a href="?page1={{ news_list.previous_page_number }}" class="btn btn-sm btn-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/></svg>
+            {% translate "上一頁" %}
+        </a>
+    {% endif %}
+    {% for page1 in news_list.paginator.page_range %}
+        {% if page1 == news_list.number %}
+            <button class="btn btn-sm btn-dark" disabled>{{ page1 }}</button>
+        {% else %}
+            <a href="?page1={{ page1 }}" class="btn btn-sm btn-dark">{{ page1 }}</a>
+        {% endif %}
+    {% endfor %}
+    {% if news_list.has_next %}
+        <a href="?page1={{ news_list.next_page_number }}" class="btn btn-sm btn-dark">
+            {% translate "下一頁" %}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/></svg>
+        </a>
+    {% endif %}
+    </div>
+{% endif %}
+<br>
+<br>
+<div class="h2 fw-bolder" id="tech">{% translate "技術報告" %}</div>
+<table class="table table-striped">
+    <thead>
+        <tr class="table-dark">
+            <th style="width: 200px;">{% translate "建立時間" %}</th>
+            <th style="width: 200px;">{% translate "報告標題" %}</th>
+            <th>{% translate "報告內容" %}</th>
+            <th class="text-center" style="width: 60px;">{% translate "附檔" %}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for tech in tech_list %}
+        <tr>
+            <td>{{ tech.date }}</td>
+            <td>
+                <a href="tech-report/{{ tech.id }}" class="link-dark">{{ tech.subject }}</td>
+            <td>{{ tech.content|truncatechars:30|safe }}</td>
+            {% if tech.file %}
+                 <td class="text-center">{% translate "有" %}</td>
+            {% else %}
+                <td class="text-center">{% translate "無" %}</td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% if tech_list.has_other_pages %}
+    {% if tech.has_previous %}
+        <a href="?page2={{ tech_list.previous_page_number }}" class="btn btn-sm btn-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/></svg>
+            {% translate "上一頁" %}
+        </a>
+    {% endif %}
+    {% for page2 in tech_list.paginator.page_range %}
+        {% if page2 == tech_list.number %}
+            <button class="btn btn-sm btn-dark" disabled>{{ page2 }}</button>
+        {% else %}
+            <a href="?page2={{ page2 }}" class="btn btn-sm btn-dark">{{ page2 }}</a>
+        {% endif %}
+    {% endfor %}
+    {% if tech_list.has_next %}
+        <a href="?page2={{ tech_list.next_page_number }}" class="btn btn-sm btn-dark">
+            {% translate "下一頁" %}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/></svg>
+        </a>
+    {% endif %}
+{% endif %}
+<br>
+<br>
+<br>
+<div class="h2 fw-bolder" id="obser">{% translate "觀測報告" %}</div>
+<table class="table table-striped">
+    <thead>
+        <tr class="table-dark">
+            <th style="width: 200px;">{% translate "建立時間" %}</th>
+            <th style="width: 200px;">{% translate "報告標題" %}</th>
+            <th>{% translate "報告內容" %}</th>
+            <th class="text-center" style="width: 60px;">{% translate "附檔" %}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for obser in obser_list %}
+        <tr>
+            <td style="width: 200px;">{{ obser.date }}</td>
+            <td style="width: 200px;">
+                <a href="obser-report/{{ obser.id }}" class="link-dark">{{ obser.subject }}</td>
+            <td>{{ obser.content|truncatechars:30|safe }}</td>
+            {% if obser.file %}
+               <td class="text-center">{% translate "有" %}</td>
+            {% else %}
+                <td class="text-center">{% translate "無" %}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% if obser_list.has_other_pages %}
+    {% if obser.has_previous %}
+        <a href="?page3={{ obser_list.previous_page_number }}" class="btn btn-sm btn-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/></svg>
+            {% translate "上一頁" %}
+        </a>
+    {% endif %}
+    {% for page3 in obser_list.paginator.page_range %}
+        {% if page3 == obser_list.number %}
+            <button class="btn btn-sm btn-dark" disabled>{{ page3 }}</button>
+        {% else %}
+            <a href="?page3={{ page3 }}#obser" class="btn btn-sm btn-dark">{{ page3 }}</a>
+        {% endif %}
+    {% endfor %}
+    {% if obser_list.has_next %}
+        <a href="?page3={{ obser_list.next_page_number }}#obser" class="btn btn-sm btn-dark">
+            {% translate "下一頁" %}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/></svg>
+        </a>
+    {% endif %}
+{% endif %}
+<br>
+<br>
+{% endblock %}

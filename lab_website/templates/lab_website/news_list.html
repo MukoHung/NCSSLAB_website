@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+<section class="py-5 bg-light">
+    <div class="container px-5">
+        <h1 class="fw-bolder fs-3 mb-4">{% translate "公告" %}</h1>
+        <div class="row gx-5">
+            <div class="col-xl-12">
+                <!-- News item-->
+                {% for news, tag in news_tag %}
+                    <div class="mb-5">
+                        <div class="small text-muted">
+                            {{ news.date|date:"Y-m-d" }}&nbsp;&nbsp;
+                            {% if tag == 1 %}<div class="badge bg-danger bg-gradient rounded-pill mb-2">New!</div>{% endif %}
+                        </div>
+                        <a class="link-dark" href="{{ news.id }}"><h4>{{ news.subject }}</h4></a>
+                    </div>
+                {% endfor %}
+            </div>
+            {% if news_list.has_other_pages %}
+            <div>
+            {% if news_list.has_previous %}
+                <a href="?page={{ news_list.previous_page_number }}" class="btn btn-sm btn-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg>
+                {% translate "上一頁" %}</a>
+            {% endif %}
+            {% for page in news_list.paginator.page_range %}
+                {% if page == news_list.number %}
+                <button class="btn btn-sm btn-dark" disabled>{{ page }}</button>
+                {% else %}
+                <a href="?page={{ page }}" class="btn btn-sm btn-dark">{{ page }}</a>
+                {% endif %}
+            {% endfor %}
+            {% if news_list.has_next %}
+                <a href="?page={{ news_list.next_page_number }}" class="btn btn-sm btn-dark">
+                {% translate "下一頁" %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>
+                </a>
+            {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+

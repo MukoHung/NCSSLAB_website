@@ -1,0 +1,8 @@
+Django==3.2.5
+django-environ
+django-ckeditor
+django-widget-tweaks
+Pillow
+
+# For gunicorn
+# -r requirements-gunicorn.txt

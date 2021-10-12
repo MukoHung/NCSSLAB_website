@@ -1,0 +1,35 @@
+{% extends 'base_back.html' %}
+{% load i18n %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb h3">
+    <li class="breadcrumb-item active" aria-current="page">{% translate "個人檔案" %}</li>
+  </ol>
+</nav>
+<div class="table-responsive">
+  <table class="table table-striped table-hover caption-top table-bordered">
+    <thead>
+      <tr class="table-dark">
+        <th class="table-dark text-center" style="width: 200px;">{% translate "帳號名稱" %}</th>
+        <th class="table-dark text-center">{% translate "權限" %}</th>
+        <th class="table-dark text-center"style="width: 300px;">{% translate "操作" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="text-center">{{ request.user }}</th>
+        <th class="text-center">
+            {% for group in groups %}
+                <button type="button" class="btn btn-sm btn-outline-primary" disabled>{{ group.name }}</button>
+            {% endfor %}
+        </th>
+        <th class="text-center">
+          <a href="{% url 'change_pw' %}" class="btn btn-sm btn-success">
+              {% translate "變更密碼" %}
+          </a>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}

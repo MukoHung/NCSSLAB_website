@@ -1,0 +1,28 @@
+{% extends 'base_back.html' %}
+{% block content %}
+{% load i18n %}
+<nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+    <ol class="breadcrumb h3">
+        <li class="breadcrumb-item">
+            <a href="{% url 'back_obser_report' %}" class="text-dark text-decoration-none">{% translate "觀測報告管理" %}</a>
+        </li>
+        {% if 'create' in request.get_full_path %}
+            <li class="breadcrumb-item active" aria-current="page">{% translate "新增報告" %}</li>
+        {% else %}
+            <li class="breadcrumb-item active" aria-current="page">{% translate "編輯報告" %}</li>
+        {% endif %}
+    </ol>
+</nav>
+<div class="table-responsive">
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{ form.media }}
+        {{ form.as_p }}
+    </table>
+    <input type="submit" class="btn btn-success" value="{% translate "送出" %}" />
+    <a href="{% url 'back_obser_report' %}" type="button" class="btn btn-dark">{% translate "取消" %}</a>
+    </form>
+    <br>
+</div>
+{% endblock %}

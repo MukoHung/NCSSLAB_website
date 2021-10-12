@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container py-3">
+    <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+    <ol class="breadcrumb h3">
+        <li class="breadcrumb-item">
+        <a href="{% url 'tech_report' %}" class="text-dark text-decoration-none">{% translate "技術報告" %}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">{% translate "報告內容" %}</li>
+    </ol>
+    </nav>
+</div>
+<!-- Page Content-->
+<section>
+    <div class="container px-5 bg-light">
+        <div class="row gx-5">
+            <!-- Post content-->
+            <article>
+                <!-- Post header-->
+                <header class="mb-4">
+                    <!-- Post title-->
+                    <h1 class="fw-bolder mb-1"><br>{{ techreport.subject }}</h1>
+                    <br>
+                    <!-- Post meta content-->
+                    <ul class="post-meta list-inline">
+                        <li class="list-inline-item">
+                            <i class="fa fa-calendar-o"></i>&nbsp;&nbsp;{{ techreport.date }}
+                        </li>
+                    </ul>
+                    <hr class="mb40">
+                </header>
+                <!-- Preview image figure-->
+                <!--figure class="mb-4"><img class="img-fluid rounded" style="width:auto; height: 400px;" src="{{ techreport.img.url }}" alt="{{ techreport.subject }}" /></figure-->
+                <!-- Post content-->
+                <section class="mb-5">
+                    <p class="fs-5 mb-4">{{ techreport.content|safe }}</p>
+                    {% if techreport.file %}
+                    <br>
+                    <br>
+                        <ul class="list-inline share-buttons">
+                            <li class="list-inline-item fw-bold">{% translate "附件" %}:</li>
+                            <li class="list-inline-item">
+                                <a href="{{ techreport.file.url }}" class="link" target="_blank">{{ techreport.file.name|slice:"24:" }}</a>
+                            </li>
+                        </ul>
+                    {% endif %}
+                    {% if techreport.date|date:"Y-m-d h:m" in techreport.last_edit_time|date:"Y-m-d h:m" %}
+                        <div class="text-muted fst-italic mb-2"></div>
+                    {% else %}
+                            <div class="text-muted fst-italic mb-2">{{ techreport.last_edit_time }} {% translate "已修改" %}</div>
+                    {% endif %}
+                </section>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'base_back.html' %}
+{% load i18n %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
+<nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+  <ol class="breadcrumb h3">
+    <li class="breadcrumb-item">
+      <a href="{% url 'back_group' %}" class="text-dark text-decoration-none">{% translate "群組管理" %}</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">{% translate "新增群組" %}</li>
+  </ol>
+</nav>
+<div class="table-responsive">
+    <div class="col-4">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% for field in form.visible_fields %}
+                <div class="form-group">
+                    {{ field.label_tag }}
+                    <br>
+                    {% render_field field class="form-control" %}
+                </div>
+                <br>
+            {% endfor %}
+            {{ form.media }}
+            <br>
+
+            <!-- mutiple select -->
+            <div class="d-flex flex-row">
+                <div class="p-2">
+                    <p class="border border-dark bg-dark rounded-top my-0 text-center text-light" style="width: 380px;">
+                        {% translate "可用" %} {% translate "權限" %}
+                    </p>
+                    <input class="form-control py-0" style="width: 380px;" type="search" placeholder="{% translate "篩選器" %}">
+                    <select multiple class="form-select" style="height: 230px;width: 380px;">
+                        <option class="my-1 small" value="1">admin | 紀錄項目 | Can add log entry</option>
+                        <option class="my-1 small" value="2">auth | 權限 | Can add permission</option>
+                        <option class="my-1 small" value="3">contenttypes | 內容類型 | Can change content type</option>
+                        <option class="my-1 small" value="4">lab_website | obser report | Can view obser report</option>
+                        <option class="my-1 small" value="5">lab_website | news | Can delete news</option>
+                        <option class="my-1 small" value="6">lab_website_backstage | mail recipient | Can change mail recipient</option>
+                    </select>
+                    <div class="text-center" style="width: 380px;">
+                        <a href='#' class="text-decoration-none">{% translate "全選" %}</a>
+                    </div>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="p-1" style="height: 110px;"></div>
+                    <div class="p-1"><a href="#" class="text-dark" ><i class="bi bi-arrow-right-circle"></i></a></div>
+                    <div class="p-1"><a href="#" class="text-dark" ><i class="bi bi-arrow-left-circle"></i></a></div>
+                </div>
+                <div class="p-2">
+                    <p class="border border-dark bg-dark rounded-top my-0 text-center text-light" style="width: 380px;">
+                        {% translate "已選" %} {% translate "權限" %}
+                    </p>
+                    <select multiple class="form-select" style="height: 255px;width: 380px;">
+                        <option class="my-1 small" value="1">admin | 紀錄項目 | Can add log entry</option>
+                        <option class="my-1 small" value="2">auth | 權限 | Can add permission</option>
+                        <option class="my-1 small" value="3">contenttypes | 內容類型 | Can change content type</option>
+                        <option class="my-1 small" value="4">lab_website | obser report | Can view obser report</option>
+                        <option class="my-1 small" value="5">lab_website | news | Can delete news</option>
+                        <option class="my-1 small" value="6">lab_website_backstage | mail recipient | Can change mail recipient</option>
+                    </select>
+                    <div class="text-center" style="width: 380px;">
+                        <a href='#' class="text-decoration-none">{% translate "清除全部" %}</a>
+                    </div>
+                </div>
+            </div>
+            <!-- mutiple select end -->
+            
+            <br>
+            <input class="btn btn-success" type="submit" value="{% translate "送出" %}" />
+            <a href="{% url 'back_group' %}" type="button" class="btn btn-dark">{% translate "取消" %}</a>
+        </form>
+        <br>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load i18n %}
+<!-- Header-->
+<header class="py-5">
+    <div class="container px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xxl-6">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder mb-3">{% translate "國家通訊領域軟體安全實驗室" %}</h1>
+                    <p class="lead fw-normal text-muted mb-4">{% translate "本實驗室的目標對象為「5G網路業者」、「第三方服務提供者」與「IOT設備商」，其目的為提出5G相關之軟體系統及框架與標準。" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- About section one-->
+<section class="py-5 bg-light" id="scroll-target">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_960_720.jpg" alt="實驗室介紹圖片1" /></div>
+            <div class="col-lg-6">
+                <h2 class="fw-bolder">{% translate "四大聚焦議題" %}</h2>
+                <p class="lead fw-normal text-muted mb-0">{% translate "1. 5G網路相關軟體系統與應用程式之安全性" %}</p>
+                <p class="lead fw-normal text-muted mb-0">{% translate "2. 5G網路軟體部署及更新之安全管理" %}</p>
+                <p class="lead fw-normal text-muted mb-0">{% translate "3. 安全可信賴的5G網路供應鏈管理" %}</p>
+                <p class="lead fw-normal text-muted mb-0">{% translate "4. 用戶隱私保護之政策、制度、技術、防護措施" %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About section two-->
+<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="https://images.unsplash.com/photo-1616531770192-6eaea74c2456?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="實驗室介紹圖片2" /></div>
+            <div class="col-lg-6">
+                <h2 class="fw-bolder">{% translate "三大目標" %}</h2>
+                <p class="lead fw-normal text-muted mb-0">{% translate "1. 建立5G網路軟體系統及營運安全管理之參考框架、文件與機制" %}</p>
+                <p class="lead fw-normal text-muted mb-0">{% translate "2. 協助網路業者及5G服務提供者建立資安能量與能力" %}</p>
+                <p class="lead fw-normal text-muted mb-0">{% translate "3. 提供檢測及驗證服務" %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
